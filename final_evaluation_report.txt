@@ -1,0 +1,25 @@
+IT SERVICE DESK PERFORMANCE EVALUATION — FINAL REPORT
+======================================================================
+Evaluation Protocol  : Same balanced test set across ALL models
+                       (week3_test_subset.csv — 1,440 rows)
+Test set size        : 1,440 rows | 4 balanced classes
+----------------------------------------------------------------------
+Model                           Accuracy %   Mis-route %
+--------------------------------------------------------
+Keyword Baseline                    67.29%        32.71%
+Logistic Regression                 88.68%        11.32%
+CalibratedSVC                       92.36%         7.64%
+SGD (Elastic Net)                   92.92%         7.08%
+DistilBERT (Multi-Task)             93.96%         6.04%
+
+----------------------------------------------------------------------
+📉 QUANTIFIED NET IMPROVEMENT:
+  Keyword Baseline Mis-route Rate  : 32.71%
+  DistilBERT Mis-route Rate        : 6.04%
+  Total Mis-routing Reduction      : 81.53%
+
+  Multi-Task DistilBERT reduced ticket mis-routing by 81.53%
+  over the keyword baseline. Classical ML models evaluated on the
+  identical test set confirm consistent improvement trajectory:
+  TF-IDF + LR/SVC/SGD → DistilBERT contextual embeddings.
+======================================================================
